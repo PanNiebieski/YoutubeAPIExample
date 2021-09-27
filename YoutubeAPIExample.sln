@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31717.71
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yt.Domain", "Yt.Domain\Yt.Domain.csproj", "{E459D7D7-8861-467C-AD88-90F166E262C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yt.Models", "Yt.Domain\Yt.Models.csproj", "{E459D7D7-8861-467C-AD88-90F166E262C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yt.ApplicationCore", "Yt.ApplicationCore\Yt.ApplicationCore.csproj", "{16D619D7-1A5F-4AE3-8399-E79CFA24C964}"
 EndProject
@@ -18,6 +18,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YT.Infrastructure.GoogleApi", "YT.Infrastructure.GoogleApi\YT.Infrastructure.GoogleApi.csproj", "{ED93B778-EF56-4B21-803E-89EBAB9E77C3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yt.Infrasctructure.Explode", "Yt.Infrasctructure.Explode\Yt.Infrasctructure.Explode.csproj", "{C499874E-F757-4C75-8CC9-976424FF277D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yt.Infrastructure.Explode.ConsoleTest", "Yt.Infrastructure.ConsoleTest\Yt.Infrastructure.Explode.ConsoleTest.csproj", "{7FCE1D22-4D13-46BF-8325-5274FC5EF23B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yt.Infrastructure.GoogleApi.ConsoleTest", "Yt.Infrastructure.GoogleApi.ConsoleTest\Yt.Infrastructure.GoogleApi.ConsoleTest.csproj", "{EFD5CE1A-BA5F-4182-A17E-9D2DC65DBF19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yt.UI", "Yt.UI\Yt.UI.csproj", "{67A4E7D6-414D-4305-B8F8-2D5E033FAC35}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +47,18 @@ Global
 		{C499874E-F757-4C75-8CC9-976424FF277D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C499874E-F757-4C75-8CC9-976424FF277D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C499874E-F757-4C75-8CC9-976424FF277D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FCE1D22-4D13-46BF-8325-5274FC5EF23B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FCE1D22-4D13-46BF-8325-5274FC5EF23B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FCE1D22-4D13-46BF-8325-5274FC5EF23B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FCE1D22-4D13-46BF-8325-5274FC5EF23B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFD5CE1A-BA5F-4182-A17E-9D2DC65DBF19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFD5CE1A-BA5F-4182-A17E-9D2DC65DBF19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFD5CE1A-BA5F-4182-A17E-9D2DC65DBF19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFD5CE1A-BA5F-4182-A17E-9D2DC65DBF19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67A4E7D6-414D-4305-B8F8-2D5E033FAC35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67A4E7D6-414D-4305-B8F8-2D5E033FAC35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67A4E7D6-414D-4305-B8F8-2D5E033FAC35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67A4E7D6-414D-4305-B8F8-2D5E033FAC35}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +68,9 @@ Global
 		{16D619D7-1A5F-4AE3-8399-E79CFA24C964} = {F69D55A8-6852-47BE-8357-9ED91C994C2C}
 		{ED93B778-EF56-4B21-803E-89EBAB9E77C3} = {D8CBF0D7-01D0-4717-8B8B-21C8EFD402EE}
 		{C499874E-F757-4C75-8CC9-976424FF277D} = {D8CBF0D7-01D0-4717-8B8B-21C8EFD402EE}
+		{7FCE1D22-4D13-46BF-8325-5274FC5EF23B} = {CD25DF64-4E3F-48B7-815F-52CEB208A18F}
+		{EFD5CE1A-BA5F-4182-A17E-9D2DC65DBF19} = {CD25DF64-4E3F-48B7-815F-52CEB208A18F}
+		{67A4E7D6-414D-4305-B8F8-2D5E033FAC35} = {0E4E0F6B-79EF-4056-AAA2-D3C00D56DB9C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E77BA234-FBED-4C8E-B723-78665FBA4EA5}

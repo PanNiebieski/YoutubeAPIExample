@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="YoutubeExplode" Version="6.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Yt.ApplicationCore\Yt.ApplicationCore.csproj" />
+    <ProjectReference Include="..\Yt.Domain\Yt.Models.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,82 @@
+﻿@using Yt.Models;
+@model List<YtActivityVideoUploadModel>
+
+@{var lis = Model.Where(yt => yt.IsThisLiveStreamVideo == false);};
+
+<div style=" margin-top: 74px;">
+    <div class="containerOuter">
+        <div class="containerInner" style="padding-left:15px;padding-right:15px;">
+            <div class="Hello" style="padding-top:1.5em; padding-bottom:1.5em;">
+                <h1 style="text-align:center; font-size:1.75em !important">
+                    YouTube📼 <br /> Lista📄 <br /> Filmików🎞️ <br /> Cezarego Walenciuka
+                </h1>
+            </div>
+            <p>
+                Lubisz bardziej oglądać rzeczy niż czytać, aby się uczyć. Nie ma problemu
+                oto lista moich filmików na YouTube. Mam ich <span class="hightlightyellow">@lis.Count()</span>😱
+            </p>
+            <p>
+                Poszukaj może znajdziesz tutaj coś dla siebie.
+            </p>
+
+        </div>
+    </div>
+    <div class="containerOuter backgroundcolorswitchBLACK">
+        @*backgroundcolorUNswitchWHITE*@
+
+    </div>
+    <div class="containerOuter backgroundBlack">
+        <div class="containerInner" style="padding-left:15px;padding-right:15px;">
+            @foreach (var we in lis)
+            {
+                <div class="webinar-grid-container borderblack back2">
+                    <div class="webinar-Title "><h2 class="textalingcenter">@we.Title</h2></div>
+                    <div class="webinar-MainPicture">
+                        <div class="containerFLEXsmaller" style="margin-left: 20px;">
+
+                            @if (we.Thumbnails.Maxres != null)
+                            {<img src="@we.Thumbnails.Maxres.Url" alt="minaturka filmiku na Youtube : @we.Title" class="responsive borderradius" />}
+                            else if (we.Thumbnails.High != null)
+                            {<img src="@we.Thumbnails.High.Url" alt="minaturka filmiku na Youtube : @we.Title" class="responsive borderradius" />}
+                            else if (we.Thumbnails.Standard != null)
+                            {<img src="@we.Thumbnails.Standard.Url" alt="minaturka filmiku na Youtube : @we.Title" class="responsive borderradius" />}
+                        </div>
+                    </div>
+                    @*<div class="webinar-Screens">
+
+                        </div>*@
+                    <div class="webinar-Buttons">
+                        <div class="containerFLEXsmaller">
+                            @if (!string.IsNullOrEmpty(we.UploadVideoId))
+                            {
+                <div class="itemsmallerYT">
+                    <button class="learn-more diffrenbutton smaller back3 " onclick="window.open('@we.YouTubeUrl')" type="button">
+                        Obejrzyj
+                    </button>
+                </div>
+            }
+
+
+
+
+        </div>
+    </div>
+    <div class="webinar-Desc">
+        @if (we.Statistics != null)
+        {
+            <div>
+                Liczba wyświetleń : <span class="hightlightyellow">@we.Statistics.ViewCount</span><br />
+                Liczba polubień👍 : <span class="hightlightyellow">@we.Statistics.LikeCount</span><br />
+                Czas :  <span class="hightlightyellow">@we.Statistics.Details.Duration</span><br />
+                Kategoria: <span class="hightlightyellow">@Html.Raw(@we.Category)</span><br />
+                <br />
+            </div>}
+                    @Html.Raw(@we.DescriptionCut)
+                </div>
+            </div>
+        }
+    </div>
+
+    </div>
+
+</div>
