@@ -10,5 +10,6 @@ foreach (var activity in test)
     Console.WriteLine(
     $"\n{activity.Title}  {activity.Statistics.LikeCount} \n");
     Console.WriteLine(
-        $"{activity.PublishedAt}  {activity.YouTubeUrl} \n {activity.ChannelTitle}");
+        $"{activity.PublishedAt}  " +
+        $"{activity.YouTubeUrl} \n {activity.ChannelTitle}");
 }

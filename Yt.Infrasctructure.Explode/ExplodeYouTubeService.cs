@@ -28,7 +28,11 @@ namespace Yt.Infrasctructure.Explode
                     youtube.Videos.GetAsync(searchResult.Url);
 
                 if (video.Author.Title != "Cezary Walenciuk")
-                    continue;
+                {
+
+                    break;
+                }
+
 
 
                 YtActivityVideoUploadModel ytActivity =
@@ -40,6 +44,8 @@ namespace Yt.Infrasctructure.Explode
                 ytActivity.PublishedAt = video.UploadDate.UtcDateTime;
                 ytActivity.PublishedAtRaw = video.UploadDate.ToString();
                 ytActivity.UploadVideoId = video.Id;
+                ytActivity.Title = video.Title;
+                
 
                 ytActivity.Statistics = new YtStatistics();
                 ytActivity.Statistics.Id = video.Id;
@@ -122,7 +128,7 @@ namespace Yt.Infrasctructure.Explode
 
         public static ulong MapLongToUlong(long longValue)
         {
-            return unchecked((ulong)(longValue - long.MinValue));
+            return unchecked((ulong)(longValue));
         }
 
         public Task<List<YtActivityVideoUploadModel>> GetActivity(string ApiKey)

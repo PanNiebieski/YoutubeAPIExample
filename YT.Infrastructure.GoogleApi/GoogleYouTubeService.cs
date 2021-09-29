@@ -103,10 +103,8 @@ namespace YT.Infrastructure.GoogleApi
 
             var searchListResponse = await searchListRequest.ExecuteAsync();
 
-            List<YtStatistics> cache =
+            List<YtStatistics> listStat =
                 new List<YtStatistics>();
-
-            List<YtVideoDetails> cache2 = new List<YtVideoDetails>();
 
             foreach (var item in searchListResponse.Items)
             {
@@ -125,9 +123,9 @@ namespace YT.Infrastructure.GoogleApi
                 YtVideoDetails.Dimension = item.ContentDetails.Dimension;
                 YtVideoDetails.Projection = item.ContentDetails.Projection;
                 YtVideoDetails.LicensedContent = item.ContentDetails.LicensedContent;
-                cache.Add(YtStatisticsModel);
+                listStat.Add(YtStatisticsModel);
             }
-            return cache;
+            return listStat;
         }
 
         private ThumbnailModel MapThumb(Thumbnail thumbnail)
