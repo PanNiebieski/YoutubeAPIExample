@@ -18,6 +18,7 @@ namespace Yt.Infrasctructure.Explode
 
             var searchCezaryWalenciukOnYouTube = youtube.Search.GetVideosAsync("Cezary Walenciuk");
 
+ 
             List<YtActivityVideoUploadModel> uploadModels =
                 new List<YtActivityVideoUploadModel>();
 
@@ -32,7 +33,6 @@ namespace Yt.Infrasctructure.Explode
 
                     break;
                 }
-
 
 
                 YtActivityVideoUploadModel ytActivity =
@@ -135,6 +135,8 @@ namespace Yt.Infrasctructure.Explode
         {
             return GetActivity();
         }
+
+
     }
 
 
